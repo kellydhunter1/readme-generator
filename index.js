@@ -9,8 +9,8 @@ projectPrompt = () => {
     return inquirer.prompt([
         {
             type: 'input',
-            name: 'github',
-            message: 'Enter your Github Username',
+            name: 'username',
+            message: 'Enter your Github Username (Required)',
             validate: username => {
               if (username) {
                 return true;
@@ -23,7 +23,7 @@ projectPrompt = () => {
           {
             type: 'input',
             name: 'email',
-            message: 'Enter your email address',
+            message: 'Enter your email address (Required)',
             validate: email => {
               if (email) {
                 return true;
@@ -117,20 +117,19 @@ projectPrompt = () => {
     ])
 };
 
+// PROMISE CHAIN
 projectPrompt()
+// take projectPrompt data and put into readme template
 .then(readmeData => {
  return generateMarkdown(readmeData);
 })
+// create a file using the template
 .then(markdown => {
     return writeFile(markdown);
+    // confirm the file was created
 }).then(writeFileResponse => {
     console.log(writeFileResponse.message)
+// display error message if theres an error
 }).catch(err => {
     console.log(err);
 });
- // // TODO: Create a function to write README file
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
