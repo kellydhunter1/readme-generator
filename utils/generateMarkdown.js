@@ -2,9 +2,16 @@ const fs  = require('fs');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const licenseType = {
+  dependency: { "link" : "url" , "badge" : "png" },
+  MIT: { "link" : "https://choosealicense.com/licenses/mit/#" , "badge" : "png" },
+  GNU: { "link" : "https://choosealicense.com/licenses/gpl-3.0/" , "badge" : "png" }
+}
 function renderLicenseBadge(license) {
   if (!license) {
     return '';
+  } else {
+    
   }
 };
 
@@ -44,7 +51,8 @@ function generateMarkdown(readmeData) {
 
   ## Questions
 
-  If you have any additional questions, please reach out to me at through github github.com/${githubInfo.username} or via email at ${githubInfo.email}.
+  If you have any additional questions, please reach out to me at through github 
+  https://github.com/${githubInfo.username} or via email at ${githubInfo.email}.
 `;
 }
 

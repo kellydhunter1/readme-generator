@@ -1,7 +1,7 @@
 
-  # me
+  # Readme Generator
   ## Description
-   me
+   Use node.js to create a readme file on the command line
 
   ## Table of Contents
     * [Installation](#installation)
@@ -10,13 +10,18 @@
     * [Test](#test)
     
   ## Installation
-    me
+    None at this time
 
   ## Usage
-    me
+    None at this time
 
   ## Contributing
-    me
+    Use freely
   
   ## Test
-  me
+  none at this time
+
+  ## Questions
+
+  If you have any additional questions, please reach out to me at through github 
+  https://github.com/kellydhunter1 or via email at kellydhunter1@gmail.com.

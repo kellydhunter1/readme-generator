@@ -105,7 +105,7 @@ projectPrompt = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Please choose the license type for your project',
-            choices: [],
+            choices: ['dependency license', 'MIT license', 'GNU GPLv3'],
             when: ({ confirmLicense }) => {
                 if (confirmLicense) {
                     return true;
